@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        function btnClick() {
+            document.getElementById("hire-me").style.display = "block";
+            document.getElementById("hire-me").click().style.display="none";
+        }
+        function btnSubmit(){
+            $(function(){
+                $.ajax({
+                    method:"post",
+                    url:"https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+
+                })
+            })
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">PORTFO<span>LIO</span></div>
+            <div class="menu">
+                <a class="nav-link" href="#about"><span>About</span></a>
+                <a class="nav-link" href="#"><span>Works</span></a>
+                <a class="nav-link" href="#"><span>Project</span></a>
+                <a class="nav-link" href="#skill"><span>Skill</span></a>
+                <a class="nav-link" href="#contact"><span>Contact</span></a>
+            </div>
+        </nav>
+
+        <div class="text">
+            <p>Hello I Am</p>
+            <h2>Ajaharuddin Alam</h2>
+            <p>And I Am a <span class="auto"></span></p>
+            <a style="border-radius: 50px;" href="#hire-me"><button onclick="btnClick()" class="c-btn">Hire me</button></a>
+        </div>
+
+    </header>
+
+    <div id="hire-me" style="display: none;">
+        <h1 style="color: #e74c3c;">Calls Or Mails</h1>
+        <form>
+            <h1><span class="bi bi-whatsapp"></span> Mobile No. +91 7355346438</h1>
+            <p>E-mail :- ajahruddin7843@gmail.com</p>
+        </form>
+    </div>
+
+
+    <section id="about">
+        <div class="section-info">
+            <h1>About</h1>
+            <p>who i am ?</p>
+
+        </div>
+
+        <div class="about-row">
+            <div class="about-left-col">
+                <img src="image/IMG20220710084217_01.jpg" alt="">
+            </div>
+            <div class="about-right-col">
+                <p id="para">Hello, I'm Ajaharuddin & <br> I'm a <span class="auto1"></span></p>
+                <p>
+                    I am a highly motivated Full Stack Developer with expertise in HTML, CSS, JavaScript, React.js, and Node.js. I have a strong technical foundation and a passion for staying up-to-date with the latest technologies.
+
+                </p>
+                <a href="Ajahar smart resume (2) (1).pdf"><button class="c-btn">Download CV</button></a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skill">
+        <div class="section-info">
+            <h1>Skill's</h1>
+            <p>who i am ?</p>
+
+        </div>
+        <div class="skill-row">
+            <div class="skill-left-col">
+                <p>My portfolio includes an online shopping site that I developed using a combination of front-end technologies such as HTML, CSS, and JavaScript, and back-end technologies such as Node.js and MongoDB. I also completed training on UI Full Stack Developer and React.js from Naresh I Technology in Hyderabad.
+
+In addition to my technical skills, I am a self-motivated and target-oriented professional with strong problem-solving abilities. I have excellent communication and interpersonal skills, and I am always eager to take on new challenges.</p>
+                <button class="c-btn"><a href="#">Read more</a></button>
+            </div>
+            <div class="skill-right-col">
+                <div class="progress-div">
+                    <p>
+                        <span>HTML</span> <br>
+                        <progress value="80" max="100"></progress>
+                        <span>100%</span>
+                    </p>
+                    <p>
+                        <span>CSS</span> <br>
+                        <progress value="80" max="100"></progress>
+                        <span>100%</span>
+                    </p>
+                    <p>
+                        <span>JAVASCRIPT</span> <br>
+                        <progress value="80" max="100"></progress>
+                        <span>80%</span>
+                    </p>
+                    <p>
+                        <span>BOOTSTRAP</span> <br>
+                        <progress value="80" max="100"></progress>
+                        <span>100%</span>
+                    </p>
+                    <p>
+                        <span>Jquery</span><br>
+                        <progress value="70" max="100"></progress>
+                        <span>80%</span>
+                    </p>
+                  <p>
+                    <span>Node.Js</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                  </p>
+                  <p>
+                    <span>MongoDB</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                  </p>
+                  <p>
+                    <span>Express.js</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                  </p>
+                  <p>
+                    <span>React.js</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>90%</span>
+                  </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-info">
+            <h1>Services</h1>
+            <p>what we provide</p>
+        </div>
+        <div class="services-row">
+            <div class="services-box">
+                <img src="image/IMG20220710210151.jpg" alt="">
+                <h2>web Design</h2>
+                <p style="font-size: 12px;">1: "Designing for the Future: The Latest Trends and Techniques in Web Design"<br>
+                   2: "Stand Out in the Digital Crowd: Create a Unique Website with Innovative Design"<br>
+                   3: "From Concept to Creation: Crafting a Stunning Website That Delivers Results"<br>
+                   4: "User-Centered Design: How to Build a Website That Engages and Converts" </p>
+            </div>
+            <div class="services-box">
+                <img src="image/20160307_164747.jpg" alt="">
+                <h2>Web Developer</h2>
+                <p style="font-size: 12px;">1: "Opportunity Awaits: Web Developer Wanted for Innovative Tech Company"<br>
+                    2: "Take Your Coding Skills to the Next Level: Join Our Team as a Web Developer"<br>
+                   3: "Join a Dynamic Team of Web Developers: Create Cutting-Edge Websites and Apps"<br>
+                   4: "Ready to Build the Next Big Thing? We're Hiring Web Developers"</p>
+            </div>
+            <div class="services-box">
+                <img src="image/IMG20220701233405.jpg" alt="">
+                <h2>Web Pages</h2>
+                <p style="font-size: 12px;">1: "Web Pages Wizard Wanted: Join Our Team and Craft Beautiful Online Experiences" <br>
+                    2: "Web Pages Expert Needed: Join Our Mission to Build User-Friendly Websites"<br>
+                    3: "Be a Part of Our Web Pages Team and Make a Real Impact on the Digital World"<br>
+                    4: "Attention to Detail? Join Our Team as a Web Pages Specialist and Help Create Perfect Pages"</p>
+            </div>
+            <div class="services-box">
+                <img src="image/IMG20220710084336.jpg" alt="">
+                <h2>App Design</h2>
+                <p style="font-size: 12px;">1: "Create the Next Big Thing: Join Our Team as an App Designer and Make Your Mark on Mobile"
+                    2: "App Designer Wanted: Join Our Team and Design User-Friendly and Engaging Apps"<br>
+                    3: "Transform Ideas into Reality: Join Our Team as an App Designer and Help Us Build the Future of Mobile"<br>
+                    4: "Join a Dynamic Team of App Designers and Bring Your Creative Vision to Life"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="sectoin-info" style="color: white;">
+            <h1>Get In Touch</h1>
+            <p style="color: black;">We are available <span style="color: white; font-weight: bold;">24/7</span></p>
+        </div>
+
+
+        <div class="contact-row">
+            <div class="contact-left-col">
+                <img src="image/IMG20220710210151.jpg" alt="">
+            </div>
+            <div class="contact-right-col">
+                <form>
+                    <h2>Connect with us</h2>
+                    <input type="text" name="" placeholder="Name">
+                    <input type="email" name="" placeholder="E-mail">
+                    <br>
+                    <textarea id="" cols="40" rows="10" placeholder="Massege"></textarea><br>
+                    <button class="c-btn" onclick="btnSubmit()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <h2>Developed By Ajaharuddin Alam <span>+91 7355346438</span></h2>
+        <a href="#"><span class="bi bi-twitter"></span></a>
+        <a href="https://www.facebook.com/sonu.alam.18294053/" target="_blank"><span class="bi bi-facebook"></span></a>
+        <a href="https://www.instagram.com/ajahruddin_alam/?hl=en" target="_blank"><span
+                class="bi bi-instagram"></span></a>
+        <a href="https://www.google.com/"><span class="bi bi-google"></span></a>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../public/js/jquery.ripples-master/dist/jquery.ripples-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('header').ripples({
+                dropRadius: 20,
+                perturbance: 0.03,
+
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto", {
+            strings: ["Front End Developer", "Full Stack Web Developer", "Web Designer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+
+    <script>
+        var typed = new Typed(".auto1", {
+            strings: ["Web Designer", "Web Developer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+
+
+</body>
+
+</html>
