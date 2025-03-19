@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         function btnClick() {
             document.getElementById("hire-me").style.display = "block";
@@ -20,17 +22,45 @@
             $(function(){
                 $.ajax({
                     method:"post",
-                    url:"https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
-
+                    type: "post",
+                    url:"https://api.emailjs.com/api/v1.0/email/send",
+                   data:JSON.stringify(data),
+                   contentType: 'application/json'
+                }).done(function(){
+                    alert('YOur Email is sent!');
+                }).fail(function(error){
+                    alert('Oops......' + JSON.stringify(error));
                 })
-
-
 
             })
         }
 
     </script>
-<!--Start of Tawk.to Script-->
+    <!-- javascript code for emailing system -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("H617QOqW_LPPtchz6"); // Replace with your Public Key
+        })();
+    
+        function btnSubmit() {
+            var templateParams = {
+                name: document.querySelector("input[name='name']").value,
+                email: document.querySelector("input[name='email']").value,
+                message: document.querySelector("textarea[name='message']").value
+            };
+    
+            emailjs.send("service_qdka48g", "template_9iq4fki", templateParams)
+                .then(function(response) {
+                    alert("Email sent successfully!");
+                    document.querySelector("form").reset();
+                }, function(error) {
+                    alert("Failed to send email: " + JSON.stringify(error));
+                });
+        }
+    </script>
+    
+<!--Start of Tawk.to  Chatbot AI Script-->
 <script type="text/javascript">
    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
    (function(){
@@ -42,7 +72,7 @@
    s0.parentNode.insertBefore(s1,s0);
    })();
    </script>
-   <!--End of Tawk.to Script-->
+   <!--End of Tawk.to Script Chatbot AI-->
     
 </head>
 
@@ -62,7 +92,7 @@
         <div class="text">
             <p>Hello I am</p>
             <h2>Ajaharuddin</h2>
-            <p>And I am a System Adminstrator in Jaljeevika <span class="auto"></span></p>
+            <p>Currently I am a System Administrator in Jaljeevika <span class="auto"></span></p>
             <a style="border-radius: 50px;" href="#hire-me"><button onclick="btnClick()" class="c-btn">Hire me</button></a>
         </div>
 
@@ -168,6 +198,21 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
                     <progress value="80" max="100"></progress>
                     <span>90%</span>
                   </p>
+                  <p>
+                    <span>Admin panel</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>100%</span>
+                  </p>
+                  <p>
+                    <span>Dashboard Design</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>100%</span>
+                  </p>
+                  <p>
+                    <span>MIS</span><br>
+                    <progress value="80" max="100"></progress>
+                    <span>100%</span>
+                  </p>
 
                 </div>
             </div>
@@ -193,7 +238,7 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
         </div>
         <div class="services-row">
             <div class="services-box">
-                <img src="image/IMG20220710210151.jpg" alt="">
+                <img  src="image/IMG20220710210151.jpg" alt="">
                 <h2>web Design</h2>
                 <p style="font-size: 12px;">1: "Designing for the Future: The Latest Trends and Techniques in Web Design"<br>
                    2: "Stand Out in the Digital Crowd: Create a Unique Website with Innovative Design"<br>
@@ -201,28 +246,33 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
                    4: "User-Centered Design: How to Build a Website That Engages and Converts" </p>
             </div>
             <div class="services-box">
-                <img src="image/20160307_164747.jpg" alt="">
+                <img class="webimage" src="image/20160307_164747.jpg" alt="">
                 <h2>Web Developer</h2>
                 <p style="font-size: 12px;">1: "Opportunity Awaits: Web Developer Wanted for Innovative Tech Company"<br>
                     2: "Take Your Coding Skills to the Next Level: Join Our Team as a Web Developer"<br>
                    3: "Join a Dynamic Team of Web Developers: Create Cutting-Edge Websites and Apps"<br>
                    4: "Ready to Build the Next Big Thing? We're Hiring Web Developers"</p>
             </div>
-            <div class="services-box">
-                <img src="image/IMG20220701233405.jpg" alt="">
-                <h2>Web Pages</h2>
-                <p style="font-size: 12px;">1: "Web Pages Wizard Wanted: Join Our Team and Craft Beautiful Online Experiences" <br>
-                    2: "Web Pages Expert Needed: Join Our Mission to Build User-Friendly Websites"<br>
-                    3: "Be a Part of Our Web Pages Team and Make a Real Impact on the Digital World"<br>
-                    4: "Attention to Detail? Join Our Team as a Web Pages Specialist and Help Create Perfect Pages"</p>
+            <div  class="services-box">
+                <img class="webimage3" src="image/IMG20220701233405.jpg" alt="">
+                <h2>System Admin</h2>
+                <p style="font-size: 12px;">managing **Windows and Linux** environments is essential for ensuring seamless IT operations, security, and <br> 
+                    **Virtualization** optimizes resources by enabling multiple virtual machines on a single server.<br> 
+                    **Configuration Management** automates system settings and updates using tools like Ansible or. <br> 
+                    **Access Control** safeguards data by managing user permissions and authentication.<br> 
+                    Strong **Troubleshooting** skills help quickly resolve issues and minimize downtime. Additionally,<br> 
+                    **User Training** enhances cybersecurity awareness and system efficiency, ensuring a productive and secure IT environment.
+                </p>
             </div>
             <div class="services-box">
                 <img src="image/IMG20220710084336.jpg" alt="">
-                <h2>App Design</h2>
-                <p style="font-size: 12px;">1: "Create the Next Big Thing: Join Our Team as an App Designer and Make Your Mark on Mobile"
-                    2: "App Designer Wanted: Join Our Team and Design User-Friendly and Engaging Apps"<br>
-                    3: "Transform Ideas into Reality: Join Our Team as an App Designer and Help Us Build the Future of Mobile"<br>
-                    4: "Join a Dynamic Team of App Designers and Bring Your Creative Vision to Life"</p>
+                <h2>Additional Skills</h2>
+                <p style="font-size: 12px;">**Dashboard Design** enables clear data visualization for quick decision-making.<br> 
+                    **Form Design** ensures efficient and user-friendly data collection.<br> 
+                    **Data Monitoring** helps track performance and security in real-time.<br> 
+                    **UI/UX Design** enhances usability with intuitive interfaces.<br> 
+                    **Cloud Services** provide scalability, security, and remote access. Strong<br> 
+                    **Leadership** drives team efficiency, innovation, and project success.</p>
             </div>
         </div>
     </section>
@@ -239,14 +289,13 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
                 <img src="image/IMG20220710210151.jpg" alt="">
             </div>
             <div class="contact-right-col">
-                <form>
-                    <h2>Connect with us</h2>
-                    <input type="text" name="" placeholder="Name">
-                    <input type="email" name="" placeholder="E-mail">
-                    <br>
-                    <textarea id="" cols="40" rows="10" placeholder="Massege"></textarea><br>
-                    <button class="c-btn" onclick="btnSubmit()">Submit</button>
+                <form action="https://formspree.io/f/mrbpeerr" method="POST">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <textarea name="message" cols="40" rows="10" placeholder="Message" required></textarea><br>
+                    <button class="c-btn" type="submit">Submit</button>
                 </form>
+                
             </div>
         </div>
     </section>

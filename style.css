@@ -201,7 +201,8 @@ progress {
     flex-basis: 25%;
     text-align: center;
     box-shadow: 2px 3px 5px gray;
-    padding: 20px;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .services-box:hover {
@@ -212,7 +213,20 @@ progress {
 .services-box img {
     width: 50%;
 }
-
+.webimage{
+    width: 200px;  /* Box ki width */
+    height: 260px; /* Box ki height */
+    overflow: hidden; /* Extra part hide karne ke liye */
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.webimage3{
+    width: 200px;  /* Box ki width */
+    height: 220px; /* Box ki height */
+    overflow: hidden; /* Extra part hide karne ke liye */
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 #contact {
     padding: 100px 50px;
     background: linear-gradient(160deg, #e74c3c 45%, white 0%);
