@@ -28,6 +28,7 @@
                    contentType: 'application/json'
                 }).done(function(){
                     alert('YOur Email is sent!');
+                    form.reset();
                 }).fail(function(error){
                     alert('Oops......' + JSON.stringify(error));
                 })
@@ -53,7 +54,7 @@
             emailjs.send("service_qdka48g", "template_9iq4fki", templateParams)
                 .then(function(response) {
                     alert("Email sent successfully!");
-                    document.querySelector("form").reset();
+                    form.reset();
                 }, function(error) {
                     alert("Failed to send email: " + JSON.stringify(error));
                 });
@@ -92,7 +93,7 @@
         <div class="text">
             <p>Hello I am</p>
             <h2>Ajaharuddin</h2>
-            <p>Currently I am a System Administrator in Jaljeevika <span class="auto"></span></p>
+            <p>Currently I am a <span class="auto"></span></p>
             <a style="border-radius: 50px;" href="#hire-me"><button onclick="btnClick()" class="c-btn">Hire me</button></a>
         </div>
 
@@ -120,17 +121,13 @@
             </div>
             <div class="about-right-col">
                 <p id="para">Hello, I'm Ajaharuddin & <br> I'm a <span class="auto1"></span></p>
-                <p>
-                    •	Develop and deploy web applications and chatbots.
-                    •	Perform system analysis and manage projects.
-                    •	Lead, monitor, and manage field-level data.
-                    •	Analyze and visualize data for insights.
-                    •	Maintain and enhance the website with new features.
-                    •	Redesign website sections for improved user experience.
-                    •	Manage hosting environments and ensure smooth operation.
-
-
+                <p id="workexp">
+                    <span>I am currently working at Jaljeevika as a System Administrator, where I develop and deploy web applications and chatbots, perform system analysis, and manage projects. I lead, monitor, and manage field-level data while analyzing and visualizing data for insights. Additionally, I maintain and enhance the website with new features, redesign sections for improved user experience, and ensure smooth operation by managing hosting environments.</span>
+                    
+                    <span>I have expertise in frontend development with HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js, as well as backend technologies like Node.js, Express.js, and MongoDB. Additionally, I possess strong system administration skills in Windows, Linux, virtualization, configuration management, access control, and troubleshooting. I am proficient in tools like Zoho Apps, Google Workspace, Looker Studio, and JotForm, and have experience in UI/UX design, cloud services, and dashboard creation.</span>
                 </p>
+                
+                    
                 <a href="Ajahar-resume.pdf"><button class="c-btn">Download CV</button></a>
             </div>
 
@@ -146,9 +143,11 @@
         </div>
         <div class="skill-row">
             <div class="skill-left-col">
-                <p>My portfolio includes an online shopping site that I developed using a combination of front-end technologies such as HTML, CSS, and JavaScript, and back-end technologies such as Node.js and MongoDB. I also completed training on UI Full Stack Developer and React.js from Naresh I Technology in Hyderabad.
+                <p>My portfolio includes an online shopping site that I developed using a combination of front-end technologies such as HTML, CSS, and JavaScript, and back-end technologies such as Node.js and MongoDB. 
+                    I also completed training on UI Full Stack Developer and React.js from Naresh I Technology in Hyderabad. I have expertise in frontend development with HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js, along with backend development skills in Node.js, Express.js, and MongoDB. 
+                    As a System Administrator, I manage Windows and Linux systems, virtualization, configuration management, access control, troubleshooting, and user training. I am proficient in various tools and platforms, including Zoho Apps, MIS, Looker Studio, Canvas, MS Office, Jotform, Admin Panel, Google Workspace, Google Apps Script, and Chatbot development. 
+                    Additionally, I have experience in dashboard and form design, data monitoring, UI/UX design, cloud services, and leadership. I am a self-motivated and target-oriented professional with strong problem-solving abilities, excellent communication, and interpersonal skills, always eager to take on new challenges.</p>
 
-In addition to my technical skills, I am a self-motivated and target-oriented professional with strong problem-solving abilities. I have excellent communication and interpersonal skills, and I am always eager to take on new challenges.</p>
                 <button class="c-btn"><a href="#">Read more</a></button>
             </div>
             <div class="skill-right-col">
@@ -295,7 +294,6 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
                     <textarea name="message" cols="40" rows="10" placeholder="Message" required></textarea><br>
                     <button class="c-btn" type="submit">Submit</button>
                 </form>
-                
             </div>
         </div>
     </section>
@@ -308,7 +306,8 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
 <!--close-->
 
     <section id="footer">
-        <h2>developed By Ajaharuddin Alam <span>+91 7355346438</span></h2> 
+        <h4 style="padding-right: 50px;">@ 2025 All Right Reservied</h4>
+        <h3 style="padding-left: 350px;">Developer Ajaharuddin Alam <span>+91 7355346438</span></h3> 
         <a href="#"><span class="bi bi-twitter"></span></a>
         <a href="https://www.facebook.com/sonu.alam.18294053/" target="_blank"><span class="bi bi-facebook"></span></a>
         <a href="https://www.instagram.com/ajahruddin_alam/?hl=en" target="_blank"><span
@@ -334,7 +333,7 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed(".auto", {
-            strings: [ "System Administration" , "Front End Developer", "Full Stack Web Developer", "Web Designer"],
+            strings: [ "System Administrator" , "Front End Developer", "Full Stack Web Developer", "App Developer"],
             typeSpeed: 150,
             backSpeed: 150,
             loop: true
@@ -343,7 +342,7 @@ In addition to my technical skills, I am a self-motivated and target-oriented pr
 
     <script>
         var typed = new Typed(".auto1", {
-            strings: ["Web Designer", "Web Developer"],
+            strings: ["System Admin", "Web Developer"],
             typeSpeed: 150,
             backSpeed: 150,
             loop: true
