@@ -83,7 +83,7 @@
             <div class="logo">PORTFO<span>LIO</span></div>
             <div class="menu">
                 <a class="nav-link" href="#about"><span>About</span></a>
-                <a class="nav-link" href="Ajahar-resume.pdf"><span>Resume</span></a>
+                <a class="nav-link" href="Ajaharuddin Resume.pdf"><span>Resume</span></a>
                 <a class="nav-link" href="#Project"><span>Project</span></a>
                 <a class="nav-link" href="#skill"><span>Skill</span></a>
                 <a class="nav-link" href="#contact"><span>Contact</span></a>
@@ -102,7 +102,7 @@
     <div id="hire-me" style="display: none;">
         <h1 style="color: #e74c3c;">Contact Details</h1>
         <form>
-            <h1><span class="bi bi-whatsapp"></span> Mobile No. +917355346438</h1>
+            <h3><span class="bi bi-whatsapp"> </span><br>+917355346438</h3>
             <p>E-mail :- ajahruddin7843@gmail.com</p>
         </form>
     </div>
@@ -266,7 +266,7 @@
         </div>
         <div class="services-row">
             <div class="services-box">
-                <img class="webimage" src="image/IMG20220710210151.jpg" alt="">
+                <img class="webimage" src="image/IMG-20250728-WA0165.jpg" alt="">
                 <h2>web Design</h2>
                 <p style="font-size: 12px;">1: "Designing for the Future: The Latest Trends and Techniques in Web Design"<br>
                    2: "Stand Out in the Digital Crowd: Create a Unique Website with Innovative Design"<br>
@@ -274,7 +274,7 @@
                    4: "User-Centered Design: How to Build a Website That Engages and Converts" </p>
             </div>
             <div class="services-box">
-                <img class="webimage" src="image/20160307_164747.jpg" alt="">
+                <img class="webimage" src="image/IMG-20250728-WA0179.jpg" alt="">
                 <h2>Web Developer</h2>
                 <p style="font-size: 12px;">1: "Opportunity Awaits: Web Developer Wanted for Innovative Tech Company"<br>
                     2: "Take Your Coding Skills to the Next Level: Join Our Team as a Web Developer"<br>
@@ -313,7 +313,7 @@
 
         <div class="contact-row">
             <div class="contact-left-col">
-                <img class="webimage2" src="image/IMG20220710210151.jpg" alt="">
+                <img class="webimage2" src="image/IMG-20250728-WA0151.jpg" alt="">
             </div>
             <div class="contact-right-col">
                 <form action="https://formspree.io/f/mrbpeerr" method="POST">
@@ -381,42 +381,51 @@
         })
     </script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const progresses = document.querySelectorAll(".progress-div progress");
+document.addEventListener("DOMContentLoaded", () => {
+  const progresses = document.querySelectorAll(".progress-div progress");
 
-    progresses.forEach((progress, index) => {
-        let target = progress.value;
-        progress.value = 0;
+  const animateProgress = (progress, percentText, target, max) => {
+    progress.value = 0;
+    if (percentText) percentText.classList.remove("glow");
+    let startTime = null;
 
-        let percentText = progress.nextElementSibling;
-        let current = 0;
-        let startTime = null;
+    function animateFill(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progressValue = Math.min((elapsed / 1500) * target, target);
+      progress.value = progressValue;
 
-        function animateFill(timestamp) {
-            if (!startTime) startTime = timestamp;
-            let progressTime = timestamp - startTime;
+      if (percentText) {
+        percentText.textContent = Math.floor((progressValue / max) * 100) + "%";
+      }
 
-            // Progress calculation
-            let percent = Math.min((progressTime / 1500) * target, target); // 1.5s animation
-            progress.value = percent;
+      if (progressValue < target) {
+        requestAnimationFrame(animateFill);
+      } else {
+        if (percentText) percentText.classList.add("glow");
+      }
+    }
+    requestAnimationFrame(animateFill);
+  };
 
-            if (percentText) {
-                percentText.textContent = Math.floor(percent) + "%";
-            }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progress = entry.target;
+        const target = Number(progress.getAttribute('value')) || 0;
+        const max = progress.max || 100;
+        const percentText = progress.nextElementSibling;
 
-            if (percent < target) {
-                requestAnimationFrame(animateFill);
-            } else {
-                // Glow effect after completion
-                if (percentText) percentText.classList.add("glow");
-            }
-        }
-
-        // Delay each animation
-        setTimeout(() => {
-            requestAnimationFrame(animateFill);
-        }, index * 300);
+        animateProgress(progress, percentText, target, max);
+      }
     });
+  }, {
+    threshold: 0.5 // element visible 50%
+  });
+
+  progresses.forEach(progress => {
+    observer.observe(progress);
+  });
 });
 </script>
 
