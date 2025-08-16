@@ -87,21 +87,33 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         </nav>
 
         <div class="text">
-            <p>Hello I am</p>
-            <h2>Ajaharuddin</h2>
-            <p>Currently I am a <span class="auto"></span></p>
-            <a style="border-radius: 50px;" href="#hire-me"><button onclick="btnClick()" class="c-btn">Hire me</button></a>
-        </div>
+    <p>Hello I am</p>
+    <h2>Ajaharuddin</h2>
+    <p>Currently I am a <span class="auto"></span></p>
+    <button onclick="openModal()" class="c-btn" style="border-radius: 50px;">Hire me</button>
+</div>
 
-    </header>
-
-    <div id="hire-me" style="display: none;">
-        <h1 style="color: #e74c3c;">Contact Details</h1>
-        <form>
-            <h3><span class="bi bi-whatsapp"> </span><br>+917355346438</h3>
-            <p>E-mail :- ajahruddin7843@gmail.com</p>
-        </form>
+<!-- Popup Modal -->
+<div id="hireModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 style="color:#e74c3c; margin-bottom:15px;">Contact Details</h2>
+    
+    <div class="contact-item">
+      <span class="bi bi-whatsapp" style="color:green; font-size:22px;"></span>
+      <span id="phone">+917355346438</span>
+      <button onclick="copyText('phone')" class="copy-btn">Copy</button>
     </div>
+
+    <div class="contact-item">
+      <span class="bi bi-envelope" style="color:#e67e22; font-size:22px;"></span>
+      <span id="email">ajahruddin7843@gmail.com</span>
+      <button onclick="copyText('email')" class="copy-btn">Copy</button>
+    </div>
+  </div>
+</div>
+</header>
+
 
 
     <section id="about">
@@ -427,6 +439,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+function openModal() {
+  document.getElementById("hireModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("hireModal").style.display = "none";
+}
+window.onclick = function(event) {
+  var modal = document.getElementById("hireModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+function copyText(id) {
+  var text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    alert("Copied: " + text);
+  });
+}
+</script>
 </body>
 
 </html>

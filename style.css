@@ -462,6 +462,97 @@ progress {
     transform: scale(0.98); /* Press effect */
 }
 
+/* Modal background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4); 
+  backdrop-filter: blur(5px); /* blur background */
+}
+
+/* Centered compact card */
+.modal-content {
+  background: rgba(255,255,255,0.95); 
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;  /* small width */
+  text-align: center;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+  animation: zoomIn 0.4s ease;
+}
+#phone{
+    margin-left: 650px;
+}
+/* Close button */
+.modal-content {
+  background: rgba(255,255,255,0.95);
+  margin: 12% auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
+  animation: zoomIn 0.4s ease;
+  position: relative; /* important for close button */
+}
+
+/* Close button top-right */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  
+  border: 2px solid #e74c3c;
+  border-radius: 50%;
+  padding: 2px 7px;
+  line-height: 20px;
+}
+
+.close:hover {
+  background: #e74c3c;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Contact item style */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* Copy button */
+.copy-btn {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.copy-btn:hover { background: #c0392b; }
+
+/* Animation */
+@keyframes zoomIn {
+  from {transform: scale(0.7); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
 /* Footer Section */
 .footer {
   position: relative;
