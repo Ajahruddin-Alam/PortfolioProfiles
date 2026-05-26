@@ -1,466 +1,435 @@
+<!-- =========================
+PREMIUM PORTFOLIO INDEX.HTML
+========================= -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Ajaharuddin Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js">
-    </script>
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-document.getElementById("contact-form").addEventListener("submit", async function(event) {
-    event.preventDefault();
 
-    let form = event.target;
-    let status = document.getElementById("form-status");
-    let btnText = document.getElementById("btn-text");
-    let btnLoader = document.getElementById("btn-loader");
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    // Loader show
-    btnText.style.display = "none";
-    btnLoader.style.display = "inline";
+  <title>Ajaharuddin Alam | Full Stack Developer</title>
 
-    let formData = new FormData(form);
+  <!-- SEO -->
+  <meta name="description"
+    content="Ajaharuddin Alam - Full Stack Developer, Automation Engineer, Dashboard Developer & System Administrator Portfolio">
 
-    try {
-        let response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
+  <meta name="keywords" content="Full Stack Developer, Automation Engineer, Dashboard Developer, React Developer">
 
-        if (response.ok) {
-            status.style.display = "block";
-            status.style.color = "green";
-            status.textContent = "✅ Thank you! Your message has been sent.";
-            form.reset();
-        } else {
-            status.style.display = "block";
-            status.style.color = "red";
-            status.textContent = "❌ Oops! Something went wrong.";
-        }
-    } catch (error) {
-        status.style.display = "block";
-        status.style.color = "red";
-        status.textContent = "❌ Network error. Please try again.";
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    // Loader hide
-    btnText.style.display = "inline";
-    btnLoader.style.display = "none";
-});
-</script>
-    
-<!--Start of Tawk.to  Chatbot AI Script-->
-<script type="text/javascript">
-   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-   (function(){
-   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-   s1.async=true;
-   s1.src='https://embed.tawk.to/66fa45d74cbc4814f7e0d04f/1i90q1l4h';
-   s1.charset='UTF-8';
-   s1.setAttribute('crossorigin','*');
-   s0.parentNode.insertBefore(s1,s0);
-   })();
-   </script>
-   <!--End of Tawk.to Script Chatbot AI-->
-    
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+  <!-- Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">PORTFO<span>LIO</span></div>
-            <div class="menu">
-                <a class="nav-link" href="#about"><span>About</span></a>
-                <a class="nav-link" href="Ajaharuddin Resume.pdf"><span>Resume</span></a>
-                <a class="nav-link" href="#Project"><span>Project</span></a>
-                <a class="nav-link" href="#skill"><span>Skill</span></a>
-                <a class="nav-link" href="#contact"><span>Contact</span></a>
-            </div>
-        </nav>
 
-        <div class="text">
-    <p>Hello I am</p>
-    <h2>Ajaharuddin</h2>
-    <p>Currently I am a <span class="auto"></span></p>
-    <button onclick="openModal()" class="c-btn" style="border-radius: 50px;">Hire me</button>
-</div>
+  <!-- LOADER -->
 
-<!-- Popup Modal -->
-<div id="hireModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 style="color:#e74c3c; margin-bottom:15px;">Contact Details</h2>
-    
-    <div class="contact-item">
-      <span class="bi bi-whatsapp" style="color:green; font-size:22px;"></span>
-      <span id="phone">+917355346438</span>
-      <button onclick="copyText('phone')" class="copy-btn">Copy</button>
-    </div>
-
-    <div class="contact-item">
-      <span class="bi bi-envelope" style="color:#e67e22; font-size:22px;"></span>
-      <span id="email">ajahruddin7843@gmail.com</span>
-      <button onclick="copyText('email')" class="copy-btn">Copy</button>
-    </div>
+  <div id="loader">
+    <div class="loader-circle"></div>
   </div>
-</div>
-</header>
 
+  <!-- HEADER -->
 
+  <header>
 
-    <section id="about">
-        <div class="section-info">
-            <h1>About</h1>
-            <p>who i am ?</p>
+    <!-- NAVBAR -->
 
+    <nav>
+
+      <div class="logo">
+        PORTFO<span>LIO</span>
+      </div>
+
+      <div class="menu-toggle">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <div class="menu">
+
+        <a href="#about">About</a>
+        <a href="#automation">Automation</a>
+        <a href="#skill">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+
+        <a href="Ajaharuddin_cv.pdf" target="_blank">
+          Resume
+        </a>
+
+      </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <div class="text">
+
+      <p class="hello-text">
+        Hello, I'm
+      </p>
+
+      <h1>
+        Ajaharuddin Alam
+      </h1>
+
+      <h3>
+        <span class="auto"></span>
+      </h3>
+
+      <p class="hero-desc">
+
+        Full Stack Developer & Automation Engineer passionate about
+        building smart digital systems, workflow automation platforms,
+        dashboards, AI solutions, and scalable web applications.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact">
+          <button class="c-btn">Hire Me</button>
+        </a>
+
+        <a href="./Ajaharuddin_cv.pdf" target="_blank">
+          <button class="outline-btn">Download CV</button>
+        </a>
+
+      </div>
+
+      <div class="hero-stats">
+
+        <div>
+          <h2>20</h2>
+          <p>Projects</p>
         </div>
 
-        <div class="about-row">
-            <div class="about-left-col">
-                <img src="image/IMG20220710084217_01.jpg" alt="">
-            </div>
-            <div class="about-right-col">
-                <p id="para">Hello, I'm Ajaharuddin & <br> I'm a <span class="auto1"></span></p>
-                <p id="workexp">
-                    <span>I am currently working at Jaljeevika as a System Administrator, where I manage the organization’s IT infrastructure, develop and deploy web applications and chatbots, and oversee projects from planning to execution. My responsibilities include designing dashboards and visualizing field-level data for actionable insights, maintaining and enhancing platforms like Zoho CMS, Wix, and Jotform, and optimizing websites for improved user experience. I handle asset management, track software and subscription renewals, and monitor databases, firewalls, malware protection, and overall system performance. Additionally, I support employee onboarding by creating ID cards, providing documentation assistance across departments, and offering prompt hardware and software troubleshooting. I ensure daily system monitoring, perform regular backups, upgrade systems as needed, and integrate new technologies to maintain a secure, efficient, and scalable digital environment aligned with organizational goals.</span>
-                    
-                    <span>I specialize in dashboard development and data visualization, designing interactive dashboards, analyzing field-level data, and presenting actionable insights for decision-making. My expertise in web and application management includes maintaining and enhancing platforms such as Zoho CMS, Wix, and Jotform, implementing new website features, and optimizing user experience through UI/UX improvements. I manage technical infrastructure by overseeing databases, monitoring firewalls, ensuring malware protection, testing equipment, and maintaining peak system performance. In asset and license management, I track hardware/software inventories, handle service renewals, and monitor subscription expiries. I also provide employee support and onboarding by creating ID cards, assisting with orientation, and delivering documentation support across departments. My role in security and maintenance involves daily system monitoring, regular backups, system upgrades, and integrating new technologies. Additionally, I offer IT support and troubleshooting to resolve hardware and software issues promptly, ensuring minimal downtime and smooth operations.</span>
-                </p>
-                
-                    
-                <a href="Ajaharuddin Resume.pdf"><button class="c-btn">Download CV</button></a>
-            </div>
-
+        <div>
+          <h2>2</h2>
+          <p>Years Experience</p>
         </div>
 
-    </section>
-
-    <section id="skill">
-        <div class="section-info">
-            <h1>Skill's</h1>
-            <p>who i am ?</p>
-
+        <div>
+          <h2>10</h2>
+          <p>Automation Systems</p>
         </div>
-        <div class="skill-row">
-            <div class="skill-left-col">
-                <p>My Skills <br>
 
-                    * Frontend Development: HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React.js. <br>
+      </div>
 
-                    * Backend Development: Node.js, Express.js, MongoDB. <br>
-
-                    * Version Control: Git, GitHub.<br>
-
-                    * Deployment & Hosting: Netlify.<br>
-
-                    * System Administration: Windows & Linux administration, virtualization, configuration management, access control, troubleshooting.<br>
-
-                    * Data & Visualization Tools: Dashboard creation, Looker Studio, Zoho Analytics.<br>
-
-                    * Web & Application Management: Zoho CMS, Wix, Jotform, UI/UX design, website optimization.<br>
-
-                    * Cloud & Collaboration Tools: Google Workspace, Zoho Apps, cloud services integration.<br>
-
-                    * IT Infrastructure Management: Database management, firewall monitoring, malware protection, system performance optimization.<br>
-
-                    * Security & Maintenance: System monitoring, backups, upgrades, and security breach prevention.<br>
-
-                    * Asset & License Management: Hardware/software inventory tracking, service renewals, subscription management.
-
-                </p>
-
-                <button class="c-btn"><a href="#">Read more</a></button>
-            </div>
-            <div class="skill-right-col">
-                <div class="progress-div">
-                    <p>
-                        <span>HTML 5</span> <br>
-                        <progress value="100" max="100"></progress>
-                        <span>0%</span>
-                    </p>
-                    <p>
-                        <span>CSS 3</span> <br>
-                        <progress value="100" max="100"></progress>
-                        <span>0%</span>
-                    </p>
-                    <p>
-                        <span>JAVASCRIPT</span> <br>
-                        <progress value="100" max="100"></progress>
-                        <span>0%</span>
-                    </p>
-                    <p>
-                        <span>BOOTSTRAP 5</span> <br>
-                        <progress value="100" max="100"></progress>
-                        <span>0%</span>
-                    </p>
-                    <p>
-                        <span>Tailwind CSS</span> <br>
-                        <progress value="100" max="100"></progress>
-                        <span>0%</span>
-                    </p>
-                    <p>
-                    <p>
-                        <span>Jquery</span><br>
-                        <progress value="70" max="100"></progress>
-                        <span>0%</span>
-                    </p>
-                  <p>
-                    <span>Node.Js</span><br>
-                    <progress value="80" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-                  <p>
-                    <span>MongoDB</span><br>
-                    <progress value="80" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-                  <p>
-                    <span>Express.js</span><br>
-                    <progress value="80" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-                  <p>
-                    <span>React.js</span><br>
-                    <progress value="90" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-                  <p>
-                    <span>Admin panel</span><br>
-                    <progress value="100" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-                  <p>
-                    <span>Dashboard Design</span><br>
-                    <progress value="100" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-                  <p>
-                    <span>MIS</span><br>
-                    <progress value="100" max="100"></progress>
-                    <span>0%</span>
-                  </p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-<section id="skill">
-<div id="Project">
-    <h1>Projects</h1>
-    <p> My Works Link</p>
-    <div>
-        <p>	Pathshala <a href="https://ajahruddin-alam.github.io/Pathsala/" target="_blank">(https://ajahruddin-alam.github.io/Pathsala/)</a> </p>
-        <p>	Go Trip  <a href="https://ajahruddin-alam.github.io/Go-Trip/" target="_blank"> (https://ajahruddin-alam.github.io/Go-Trip/)  </a> </p>            
-        <p>The Theka Bar <a href="https://ajahruddin-alam.github.io/THEKA/" target="_blank"> (https://ajahruddin-alam.github.io/THEKA/)</a> </p>	
-        <p>	Portfolio <a href="https://ajahruddin-alam.github.io/PortfolioProfiles/" target="_blank"> (https://ajahruddin-alam.github.io/PortfolioProfiles/)</a></p>
-        <p>	Naaz.AI ChatBot <a href="https://naazai.netlify.app/" target="_blank"> (https://naazai.netlify.app/)</a></p>
-        <p>	Live Cricket Score Board <a href="https://livecrickets.netlify.app/" target="_blank"> (https://livecrickets.netlify.app/)</a></p>
-        <p>	Dinosaur Game <a href="https://dinosaurgames.netlify.app/" target="_blank"> (https://dinosaurgames.netlify.app/)</a></p>
-        <p>	Crazy Quiz app <a href="https://crazyquizapp.netlify.app/" target="_blank"> (https://crazyquizapp.netlify.app/)</a></p>
-        <p>	Accounting Calculator <a href="https://accountcalculate.netlify.app/" target="_blank"> (https://accountcalculate.netlify.app/)</a></p>
-        <p>	AI Note Taker app <a href="https://jaljeevikanotetaker.netlify.app/" target="_blank"> (https://jaljeevikanotetaker.netlify.app/)</a></p>
     </div>
+
+  </header>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-info">
+      <h1>About Me</h1>
+      <p>Who I Am</p>
     </div>
-</section>
-    <section id="services">
-        <div class="section-info">
-            <h1>Services</h1>
-            <p>what we provide</p>
-        </div>
-        <div class="services-row">
-            <div class="services-box">
-                <img class="webimage" src="image/IMG-20250728-WA0165.jpg" alt="">
-                <h2>web Design</h2>
-                <p style="font-size: 12px;">1: "Designing for the Future: The Latest Trends and Techniques in Web Design"<br>
-                   2: "Stand Out in the Digital Crowd: Create a Unique Website with Innovative Design"<br>
-                   3: "From Concept to Creation: Crafting a Stunning Website That Delivers Results"<br>
-                   4: "User-Centered Design: How to Build a Website That Engages and Converts" </p>
-            </div>
-            <div class="services-box">
-                <img class="webimage" src="image/IMG-20250728-WA0179.jpg" alt="">
-                <h2>Web Developer</h2>
-                <p style="font-size: 12px;">1: "Opportunity Awaits: Web Developer Wanted for Innovative Tech Company"<br>
-                    2: "Take Your Coding Skills to the Next Level: Join Our Team as a Web Developer"<br>
-                   3: "Join a Dynamic Team of Web Developers: Create Cutting-Edge Websites and Apps"<br>
-                   4: "Ready to Build the Next Big Thing? We're Hiring Web Developers"</p>
-            </div>
-            <div  class="services-box">
-                <img class="webimage" src="image/IMG20220701233405.jpg" alt="">
-                <h2>System Admin</h2>
-                <p style="font-size: 12px;">managing **Windows and Linux** environments is essential for ensuring seamless IT operations, security, and <br> 
-                    **Virtualization** optimizes resources by enabling multiple virtual machines on a single server.<br> 
-                    **Configuration Management** automates system settings and updates using tools like Ansible or. <br> 
-                    **Access Control** safeguards data by managing user permissions and authentication.<br> 
-                    Strong **Troubleshooting** skills help quickly resolve issues and minimize downtime. Additionally,<br> 
-                    **User Training** enhances cybersecurity awareness and system efficiency, ensuring a productive and secure IT environment.
-                </p>
-            </div>
-            <div class="services-box">
-                <img class="webimage" src="image/IMG20220710084336.jpg" alt="">
-                <h2>Additional Skills</h2>
-                <p style="font-size: 12px;">**Dashboard Design** enables clear data visualization for quick decision-making.<br> 
-                    **Form Design** ensures efficient and user-friendly data collection.<br> 
-                    **Data Monitoring** helps track performance and security in real-time.<br> 
-                    **UI/UX Design** enhances usability with intuitive interfaces.<br> 
-                    **Cloud Services** provide scalability, security, and remote access. Strong<br> 
-                    **Leadership** drives team efficiency, innovation, and project success.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <div class="sectoin-info" style="color: white;">
-            <h1>Get In Touch</h1>
-            <p style="color: black;">We are available <span style="color: white; font-weight: bold;">24/7</span></p>
-        </div>
+    <div class="about-row">
 
-        <div class="contact-row">
-            <div class="contact-left-col">
-                <img class="webimage2" src="image/IMG-20250728-WA0151.jpg" alt="">
-            </div>
-            <div class="contact-right-col">
-                <form action="https://formspree.io/f/mrbpeerr" method="POST">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="E-mail" required>
-                    <textarea name="message" cols="40" rows="10" placeholder="Message" required></textarea><br>
-                    <button class="c-btn" type="submit" >Submit</button>
-                </form>
-            </div>
-        </div>
-    </section>
-<!--Whatsapp chat open-->
-<div class="whatsapp-float">
-<a href="https://wa.me/917355346438" target="_blank"> <img src="./WhatsApp.svg.webp" width="55px" alt="" class="whatsapp-btn"/>
-</a>
+      <div class="about-left-col">
 
-</div>
-<!--close-->
-<!--Footer Start-->
+        <img src="image/IMG20220710084217_01.jpg" alt="profile">
+
+      </div>
+
+      <div class="about-right-col">
+
+        <p id="para">
+
+          Hello, I'm
+          <span class="highlight-name">
+            Ajaharuddin Alam
+          </span>
+
+        </p>
+
+        <p class="intro-text">
+
+          I’m a Full Stack Developer, Automation Engineer,
+          and System Administrator based in Pune, Maharashtra.
+
+          I specialize in scalable web applications,
+          workflow automation systems,
+          enterprise dashboards,
+          MIS reporting systems,
+          and smart digital solutions.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AUTOMATION -->
+
+  <section id="automation">
+
+    <div class="section-info">
+      <h1>Automation & AI</h1>
+      <p>Smart Systems I Build</p>
+    </div>
+
+    <div class="automation-grid">
+
+      <div class="automation-card">
+        <h3>💰 Salary Slip Automation</h3>
+
+        <p>
+          Automated salary slip generation and email delivery system.
+        </p>
+      </div>
+
+      <div class="automation-card">
+
+        <h3>📄 Donation Receipt Automation</h3>
+
+        <p>
+          Smart donor management and automated PDF generation workflow.
+        </p>
+
+      </div>
+
+      <div class="automation-card">
+
+        <h3>📊 MIS Dashboard</h3>
+
+        <p>
+          Real-time analytics and dashboard systems.
+        </p>
+
+      </div>
+
+      <div class="automation-card">
+
+        <h3>🤖 AI Workflow Tools</h3>
+
+        <p>
+          AI-powered chatbot systems and workflow automation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="section-info">
+
+      <h1>Featured Projects</h1>
+
+      <p>My Recent Works</p>
+
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+
+        <h3>🤖 Naaz AI ChatBot</h3>
+
+        <p>
+          AI-powered chatbot with automation workflows.
+        </p>
+
+        <a href="https://naazai.netlify.app/" target="_blank" class="project-btn">
+
+          Live Demo
+
+        </a>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>📊 Dashboard System</h3>
+
+        <p>
+          Professional MIS dashboard and analytics platform.
+        </p>
+
+        <a href="#" class="project-btn">
+
+          View Project
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="section-info">
+
+      <h1>Get In Touch</h1>
+
+      <p>Let's Work Together</p>
+
+    </div>
+
+    <div class="contact-container">
+
+      <div class="contact-left">
+
+        <img src="image/IMG-20250728-WA0151.jpg" alt="" class="contact-image">
+
+      </div>
+
+      <div class="contact-right">
+
+        <form id="contact-form" action="https://formspree.io/f/mrbpeerr" method="POST">
+
+          <input type="text" name="name" placeholder="Your Name" required>
+
+          <input type="email" name="email" placeholder="Your Email" required>
+
+          <textarea name="message" rows="6" placeholder="Write your message"></textarea>
+
+          <button type="submit" class="send-btn">
+
+            Send Message
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
   <footer class="footer">
-  <h2>@ 2025 All Rights Reserved</h2>
-  <h3>Developed by Ajaharuddin Alam <span>+917355346438</span></h3>
 
-  <div class="follow">
-    <a href="#" title="Twitter"><span class="bi bi-twitter"></span></a>
-    <a href="https://www.facebook.com/sonu.alam.18294053/" target="_blank" title="Facebook"><span class="bi bi-facebook"></span></a>
-    <a href="https://www.instagram.com/ajahruddin_alam/?hl=en" target="_blank" title="Instagram"><span class="bi bi-instagram"></span></a>
-    <a href="https://www.linkedin.com/in/ajaharuddin-alam-a96b13231/" title="Linkedin"><span class="bi bi-linkedin"></span></a>
-  </div>
-</footer>
-<!--Footer End-->
+    <h2>
+      Ajaharuddin Alam
+    </h2>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="../public/js/jquery.ripples-master/dist/jquery.ripples-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <p>
+      Full Stack Developer • Automation Engineer
+    </p>
 
-    <script>
-        jQuery(document).ready(function () {
-            $('header').ripples({
-                dropRadius: 20,
-                perturbance: 0.03,
+    <div class="social-icons">
 
-            });
-        });
-    </script>
+      <a href="#">
+        <i class="bi bi-facebook"></i>
+      </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed(".auto", {
-            strings: [ "System Administrator" , "Front End Developer", "Full Stack Web Developer", "App Developer"],
-            typeSpeed: 150,
-            backSpeed: 150,
-            loop: true
-        })
-    </script>
+      <a href="#">
+        <i class="bi bi-instagram"></i>
+      </a>
 
-    <script>
-        var typed = new Typed(".auto1", {
-            strings: ["System Admin", "Web Developer"],
-            typeSpeed: 150,
-            backSpeed: 150,
-            loop: true
-        })
-    </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const progresses = document.querySelectorAll(".progress-div progress");
+      <a href="#">
+        <i class="bi bi-linkedin"></i>
+      </a>
 
-  const animateProgress = (progress, percentText, target, max) => {
-    progress.value = 0;
-    if (percentText) percentText.classList.remove("glow");
-    let startTime = null;
+      <a href="#">
+        <i class="bi bi-github"></i>
+      </a>
 
-    function animateFill(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const elapsed = timestamp - startTime;
-      const progressValue = Math.min((elapsed / 1500) * target, target);
-      progress.value = progressValue;
+    </div>
 
-      if (percentText) {
-        percentText.textContent = Math.floor((progressValue / max) * 100) + "%";
-      }
+    <p>
+      © 2025 All Rights Reserved
+    </p>
 
-      if (progressValue < target) {
-        requestAnimationFrame(animateFill);
-      } else {
-        if (percentText) percentText.classList.add("glow");
-      }
-    }
-    requestAnimationFrame(animateFill);
-  };
+  </footer>
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const progress = entry.target;
-        const target = Number(progress.getAttribute('value')) || 0;
-        const max = progress.max || 100;
-        const percentText = progress.nextElementSibling;
+  <!-- TYPED -->
 
-        animateProgress(progress, percentText, target, max);
-      }
+  <script>
+
+    var typed = new Typed(".auto", {
+
+      strings: [
+
+        "Full Stack Developer",
+        "Automation Engineer",
+        "Dashboard Developer",
+        "AI Workflow Builder"
+
+      ],
+
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+
     });
-  }, {
-    threshold: 0.5 // element visible 50%
-  });
 
-  progresses.forEach(progress => {
-    observer.observe(progress);
-  });
-});
-</script>
+  </script>
 
-<script>
-function openModal() {
-  document.getElementById("hireModal").style.display = "block";
-}
-function closeModal() {
-  document.getElementById("hireModal").style.display = "none";
-}
-window.onclick = function(event) {
-  var modal = document.getElementById("hireModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
-function copyText(id) {
-  var text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text).then(() => {
-    alert("Copied: " + text);
-  });
-}
-</script>
+  <!-- MOBILE MENU -->
+
+  <script>
+
+    const menuToggle =
+      document.querySelector(".menu-toggle");
+
+    const menu =
+      document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", () => {
+
+      menu.classList.toggle("active-menu");
+
+    });
+
+  </script>
+
+  <!-- LOADER -->
+
+  <script>
+
+    window.addEventListener("load", () => {
+
+      const loader =
+        document.getElementById("loader");
+
+      loader.style.display = "none";
+
+    });
+
+  </script>
+
 </body>
 
 </html>
