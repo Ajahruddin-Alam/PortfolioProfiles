@@ -4,163 +4,126 @@
 <head>
   <title>Ajaharuddin Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", async function (event) {
-      event.preventDefault();
 
-      let form = event.target;
-      let status = document.getElementById("form-status");
-      let btnText = document.getElementById("btn-text");
-      let btnLoader = document.getElementById("btn-loader");
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-      // Loader show
-      btnText.style.display = "none";
-      btnLoader.style.display = "inline";
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-      let formData = new FormData(form);
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      try {
-        let response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-        if (response.ok) {
-          status.style.display = "block";
-          status.style.color = "green";
-          status.textContent = "✅ Thank you! Your message has been sent.";
-          form.reset();
-        } else {
-          status.style.display = "block";
-          status.style.color = "red";
-          status.textContent = "❌ Oops! Something went wrong.";
-        }
-      } catch (error) {
-        status.style.display = "block";
-        status.style.color = "red";
-        status.textContent = "❌ Network error. Please try again.";
-      }
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 
-      // Loader hide
-      btnText.style.display = "inline";
-      btnLoader.style.display = "none";
-    });
-  </script>
-
-<!--Start of Tawk.to Chatbot AI Script-->
-
-<script type="text/javascript">
-
-var Tawk_API = Tawk_API || {},
-    Tawk_LoadStart = new Date();
-
-(function () {
-
-    var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-
-    s1.async = true;
-
-    s1.src =
-    'https://embed.tawk.to/66fa45d74cbc4814f7e0d04f/1i90q1l4h';
-
-    s1.charset = 'UTF-8';
-
-    s1.setAttribute('crossorigin', '*');
-
-    s0.parentNode.insertBefore(s1, s0);
-
-})();
-
-/* CUSTOM POSITION */
-
-Tawk_API.customStyle = {
-
-    visibility : {
-
-        desktop : {
-
-            position : 'br',
-
-            xOffset : 20,
-
-            yOffset : 50
-
-        },
-
-        mobile : {
-
-            position : 'br',
-
-            xOffset : 20,
-
-            yOffset : 50
-
-        }
-
-    }
-
-};
-
-</script>
-
-<!--End of Tawk.to Script Chatbot AI-->
+  <!-- Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 
 <body>
+
+  <!-- LOADER -->
+
+  <div id="loader">
+    <div class="loader-circle"></div>
+  </div>
+
+  <!-- HEADER -->
+
   <header>
+
+    <!-- NAVBAR -->
+
     <nav>
-      <div class="logo">PORTFO<span>LIO</span></div>
-      <div class="menu">
-        <a class="nav-link" href="#about"><span>About</span></a>
-        <a class="nav-link" href="Ajaharuddin_cv.pdf"><span>Resume</span></a>
-        <a class="nav-link" href="#Project"><span>Project</span></a>
-        <a class="nav-link" href="#skill"><span>Skill</span></a>
-        <a class="nav-link" href="#contact"><span>Contact</span></a>
+
+      <div class="logo">
+        PORTFO<span>LIO</span>
       </div>
+
+      <div class="menu-toggle">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <div class="menu">
+
+        <a href="#about">About</a>
+        <a href="#automation">Automation</a>
+        <a href="#skill">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+
+        <a href="Ajaharuddin_cv.pdf" target="_blank">
+          Resume
+        </a>
+
+      </div>
+
     </nav>
 
+    <!-- HERO -->
+
     <div class="text">
-      <p>Hello I am</p>
-      <h2>Ajaharuddin</h2>
-      <p>Currently I am a <span class="auto"></span></p>
-      <button onclick="openModal()" class="c-btn" style="border-radius: 50px;">Hire me</button>
-    </div>
 
-    <!-- Popup Modal -->
-    <div id="hireModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2 style="color:#e74c3c; margin-bottom:15px;">Contact Details</h2>
+      <p class="hello-text">
+        Hello, I'm
+      </p>
 
-        <div class="contact-item">
-          <span class="bi bi-whatsapp" style="color:green; font-size:22px;"></span>
-          <span id="phone">+91 7355346438</span>
-          <button onclick="copyText('phone')" class="copy-btn">Copy</button>
-        </div>
+      <h1>
+        Ajaharuddin Alam
+      </h1>
 
-        <div class="contact-item">
-          <span class="bi bi-envelope" style="color:#e67e22; font-size:22px;"></span>
-          <span id="email">ajahruddin7843@gmail.com</span>
-          <button onclick="copyText('email')" class="copy-btn">Copy</button>
-        </div>
+      <h3>
+        <span class="auto"></span>
+      </h3>
+
+      <p class="hero-desc">
+
+        Full Stack Developer & Automation Engineer passionate about
+        building smart digital systems, workflow automation platforms,
+        dashboards, AI solutions, and scalable web applications.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact">
+          <button class="c-btn">Hire Me</button>
+        </a>
+
+        <a href="./Ajaharuddin_cv.pdf" target="_blank">
+          <button class="outline-btn">Download CV</button>
+        </a>
+
       </div>
+
+      <div class="hero-stats">
+
+        <div>
+          <h2>20</h2>
+          <p>Projects</p>
+        </div>
+
+        <div>
+          <h2>3+</h2>
+          <p>Years Experience</p>
+        </div>
+
+        <div>
+          <h2>10</h2>
+          <p>Automation Systems</p>
+        </div>
+
+      </div>
+
     </div>
+
   </header>
 
 
@@ -1100,110 +1063,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(entry.isIntersecting && !animated){
 
-                animated = true;
+        if (revealTop < windowHeight - revealPoint) {
 
-                skillBars.forEach((bar,index) => {
+          element.classList.add("active-reveal");
 
-                    const width =
-                        bar.getAttribute("data-width");
+        }
 
-                    setTimeout(() => {
+      });
 
-                        /* BAR FILL */
+    };
 
-                        bar.style.width = width;
+    window.addEventListener("scroll", revealOnScroll);
 
-                        /* PERCENT */
+    // Active link highlighting on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".menu a");
 
-                        const percentText =
-                            bar.parentElement.previousElementSibling
-                            .querySelector(".percent");
+    window.addEventListener("scroll", () => {
 
-                        let count = 0;
+      let current = "";
 
-                        const target =
-                            parseInt(width);
+      sections.forEach(section => {
 
-                        const counter = setInterval(() => {
+        const sectionTop = section.offsetTop;
 
-                            if(count >= target){
+        if (pageYOffset >= sectionTop - 250) {
+          current = section.getAttribute("id");
+        }
 
-                                clearInterval(counter);
+      });
 
-                            }else{
+      navLinks.forEach(link => {
 
-                                count++;
+        link.classList.remove("active");
 
-                                percentText.innerHTML =
-                                    count + "%";
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
 
-                            }
+      });
 
-                        },15);
-
-                    }, index * 150);
-
-                });
-
-                observer.disconnect();
-
-            }
-
-        });
-
-    }, {
-        threshold:0.4
     });
 
-    observer.observe(
-        document.querySelector(".progress-div")
-    );
+  </script>
 
-});
-
-</script>
+  <!-- LOADER -->
 
 <script>
 
-function toggleSkills(){
+    window.addEventListener("load", () => {
 
-    const fullContent =
-        document.getElementById("fullContent");
+      const loader =
+        document.getElementById("loader");
 
-    const button =
-        document.getElementById("readMoreBtn");
+      loader.style.display = "none";
 
-    fullContent.classList.toggle("show-content");
+      // Trigger reveal immediately for top elements on page load
+      revealOnScroll();
 
-    if(fullContent.classList.contains("show-content")){
-
-        button.innerHTML =
-            "Show Less";
-
-    }else{
-
-        button.innerHTML =
-            "Explore More";
-
-    }
-
-}
-
-</script>
-
-<script>
-
-/* =========================
-INFINITE SERVICES SLIDER
-========================= */
-
-const track =
-document.querySelector(".services-track");
-
-/* DUPLICATE CARDS */
-
-track.innerHTML += track.innerHTML;
-track.innerHTML += track.innerHTML;
+    });
 
 </script>
 
