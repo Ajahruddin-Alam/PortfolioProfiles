@@ -26,7 +26,7 @@
 header {
     width: 100%;
     height: 700px;
-    background: url(image/Ajahar.png), url(image/bg1.jpg.jfif);
+    background: url(image/Ajahar.png), url(image/Screenshot_2020-07-03-19-18-13-1.png);
     background-size: 30% 90%, cover;
     background-position: right, center;
     background-repeat: no-repeat, no-repeat;
@@ -180,7 +180,7 @@ nav {
 
 #skill {
     padding: 100px 50px;
-    background: url(image/background2.jpg);
+    background: url(image/Screenshot_2020-07-03-19-18-13-1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -291,10 +291,6 @@ progress {
 }
 
 /* Services Section */
-/* =========================
-/* =========================
-PREMIUM SERVICES SLIDER
-========================= */
 
 .services-slider{
 
@@ -399,7 +395,7 @@ PREMIUM SERVICES SLIDER
 
     margin-bottom:18px;
 
-    color:#2c3e50;
+    color: #e74c3c;
 
     transition:0.4s ease;
 }
@@ -553,7 +549,7 @@ PREMIUM SERVICES SLIDER
 }
 
 .contact-right-col form .c-btn:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+    background-color: #e74c3c; /* Darker blue on hover */
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
@@ -923,9 +919,6 @@ FOOTER SECTION
      position: absolute;  /* ya absolute depending on layout */
     z-index: 1000; 
 }
-/* =========================
-PROJECT SECTION
-========================= */
 
 /* =========================
 PROJECT SECTION
@@ -1285,62 +1278,96 @@ PROJECT SECTION
     margin-bottom: 10px;
 }
 
+/* HOVER */
+
 .skill-card:hover{
+
     transform:translateY(-6px);
-    border-color:#00c6ff;
-    box-shadow:10px 15px 35px rgba(0,198,255,0.15);
+
+    border-color:#e74c3c;
+
+    box-shadow:
+    10px 15px 35px rgba(231,76,60,0.25);
 }
 
 /* INFO */
 
 .skill-info{
+
     display:flex;
+
     justify-content:space-between;
+
     margin-bottom:14px;
+
     color:white;
+
     font-weight:600;
 }
 
 /* BAR */
 
 .skill-bar{
+
     width:100%;
+
     height:14px;
+
     background:#1e293b;
+
     border-radius:50px;
+
     overflow:hidden;
+
     position:relative;
 }
 
 /* PROGRESS */
 
 .skill-progress{
+
     width:0;
+
     height:100%;
+
     border-radius:50px;
+
     background:linear-gradient(
+
         90deg,
-        #00c6ff,
-        #0072ff
+
+        #e74c3c,
+
+        #f39c12
+
     );
 
-    transition:width 2s cubic-bezier(0.17,0.67,0.83,0.67);
+    transition:
+    width 2s cubic-bezier(0.17,0.67,0.83,0.67);
+
     position:relative;
 }
 
 /* GLOW EFFECT */
 
 .skill-progress::after{
+
     content:'';
+
     position:absolute;
+
     right:0;
+
     top:0;
+
     width:18px;
+
     height:100%;
+
     background:rgba(255,255,255,0.7);
+
     filter:blur(8px);
 }
-
 /* RESPONSIVE */
 
 @media(max-width:768px){
@@ -1349,4 +1376,127 @@ PROJECT SECTION
         padding:18px;
     }
 
+}
+
+/* MODAL */
+
+.hire-modal{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    rgba(0,0,0,0.7);
+
+    backdrop-filter:blur(6px);
+}
+
+/* CONTENT */
+
+.hire-modal-content{
+
+    background:#fff;
+
+    width:90%;
+    max-width:450px;
+
+    margin:10% auto;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    position:relative;
+
+    animation:popup 0.4s ease;
+}
+
+/* ANIMATION */
+
+@keyframes popup{
+
+    from{
+        transform:scale(0.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* CLOSE */
+
+.close-btn{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#e74c3c;
+}
+
+/* TITLE */
+
+.hire-modal-content h2{
+
+    margin-bottom:18px;
+
+    color:#2c3e50;
+}
+
+/* TEXT */
+
+.hire-modal-content p{
+
+    color:#555;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.hire-btn{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    background:#e74c3c;
+
+    color:white;
+
+    transition:0.4s ease;
+}
+
+.hire-btn:hover{
+
+    background:#c0392b;
+
+    box-shadow:
+    0 0 15px #f39c12;
 }

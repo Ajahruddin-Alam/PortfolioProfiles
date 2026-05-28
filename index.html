@@ -129,7 +129,7 @@ Tawk_API.customStyle = {
       <div class="menu">
         <a class="nav-link" href="#about"><span>About</span></a>
         <a class="nav-link" href="Ajaharuddin_cv.pdf"><span>Resume</span></a>
-        <a class="nav-link" href="#Project"><span>Project</span></a>
+        <a class="nav-link" href="#projects"><span>Project</span></a>
         <a class="nav-link" href="#skill"><span>Skill</span></a>
         <a class="nav-link" href="#contact"><span>Contact</span></a>
       </div>
@@ -139,7 +139,50 @@ Tawk_API.customStyle = {
       <p>Hello I am</p>
       <h2>Ajaharuddin</h2>
       <p>Currently I am a <span class="auto"></span></p>
-      <button onclick="openModal()" class="c-btn" style="border-radius: 50px;">Hire me</button>
+      <button
+  onclick="openModal()"
+  class="c-btn"
+  style="border-radius:50px;">
+
+  Hire Me
+
+</button>
+
+<!-- HIRE MODAL -->
+
+<div id="hireModal" class="hire-modal">
+
+  <div class="hire-modal-content">
+
+    <span class="close-btn"
+      onclick="closeModal()">
+
+      &times;
+
+    </span>
+
+    <h2>Let's Work Together 🚀</h2>
+
+    <p>
+      Available for freelance projects,
+      full stack development,
+      automation systems,
+      dashboards,
+      and IT solutions.
+    </p>
+
+    <a href="mailto:ajahruddin7843@gmail.com"
+      class="hire-btn">
+
+      Contact Now
+
+    </a>
+
+  </div>
+
+</div>
+
+
     </div>
 
     <!-- Popup Modal -->
@@ -1204,6 +1247,39 @@ document.querySelector(".services-track");
 
 track.innerHTML += track.innerHTML;
 track.innerHTML += track.innerHTML;
+
+</script>
+
+<script>
+
+function openModal(){
+
+    document.getElementById(
+        "hireModal"
+    ).style.display = "block";
+}
+
+function closeModal(){
+
+    document.getElementById(
+        "hireModal"
+    ).style.display = "none";
+}
+
+/* CLOSE OUTSIDE */
+
+window.onclick = function(event){
+
+    const modal =
+    document.getElementById(
+        "hireModal"
+    );
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+    }
+}
 
 </script>
 
