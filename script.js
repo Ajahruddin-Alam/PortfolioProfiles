@@ -226,21 +226,21 @@ EXPLORE MORE
 
 function toggleSkills(){
 
-    const content =
-    document.getElementById("fullContent");
+    const fullContent =
+        document.getElementById("fullContent");
 
-    const btn =
-    document.getElementById("readMoreBtn");
+    const button =
+        document.getElementById("readMoreBtn");
 
-    content.classList.toggle("show-content");
+    fullContent.classList.toggle("show-content");
 
-    if(content.classList.contains("show-content")){
+    if(fullContent.classList.contains("show-content")){
 
-        btn.innerHTML = "Show Less";
+        button.innerHTML = "Show Less";
 
     }else{
 
-        btn.innerHTML = "Explore More";
+        button.innerHTML = "Explore More";
 
     }
 
